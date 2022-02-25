@@ -1,0 +1,18 @@
+{
+  "name": "farasi-rides-websocket-002",
+  "version": "1.0.0",
+  "description": "Trip Handler Socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "basiljereh@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "socket.io": "^2.4.1"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}

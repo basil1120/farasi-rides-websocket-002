@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: farasi-rides-websocket-002-service
+spec:
+  selector:
+    app: farasi-rides-websocket-002
+  ports:
+  - protocol: TCP
+    port: 30100
+    nodePort: 30100
+  type: NodePort  

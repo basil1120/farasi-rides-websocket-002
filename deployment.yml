@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: farasi-rides-websocket-002
+  labels:
+    app: farasi-rides-websocket-002 
+    tier: websocket
+spec:
+  selector:
+      matchLabels:
+        app: farasi-rides-websocket-002 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: farasi-rides-websocket-002 
+    spec:
+      containers:
+        - name: farasi-rides-websocket-002 
+          image: basiljereh/farasi-rides-websocket-002:latest
+          ports:
+          - containerPort: 30100
+          env:       
+            - name: NODE_MONGO_POLLER_INTERVAL
+              value: '10000'
+            - name: TZ
+              value: Africa/Nairobi                                  
+          imagePullPolicy: Always           
